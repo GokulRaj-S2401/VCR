@@ -1,0 +1,365 @@
+@font-face {
+    font-family: ssb-regular;
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: ssb-Bold;
+    src: url("../fonts/Poppins-Bold.ttf");
+}
+@font-face {
+    font-family: ssb-semiBold;
+    src: url("../fonts/Poppins-SemiBold.ttf");
+}
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: ssb-regular;
+}
+body{
+    background-color: #F7F7F7;
+}
+header{
+    width:100%;
+    height: max-content;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #fff;
+    border-radius: 0px 0px 20px 20px;
+    z-index: 222;
+}
+.brand{
+    display: flex;
+    justify-content: space-between;
+}
+.brandName{
+    font-family: ssb-Bold;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #262626;
+}
+.menu{
+    display: none;
+}
+.logo{
+    color: #36D7A6;
+    padding-right: 10px;
+    font-size: 35px;
+
+}
+header nav ul{
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+header nav ul li{
+    list-style-type: none;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: #d3d8d6;
+    transition: 1s;
+    font-size: 15px;
+    transition: .5s;
+}
+header nav ul li a:hover{
+    color: #262626;
+}
+.active{
+    color: #056e4f;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.btnGrp button{
+    padding: 5px 20px;
+    border: 1px solid #36D7A6;
+    background: transparent;
+    color: #36D7A6;
+    font-size: 14px;
+    transition: 1s;
+    cursor: pointer;
+}
+.btnArea a:nth-child(2):hover, .btnGrp button:hover {
+    background-color: #36D7A6;
+    color: #fff;
+}
+section{
+    width: 100%;
+    height:100vh;
+    left: 0;
+    top: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 5vh 5vw;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #F7F7F7;
+}
+.content{
+    width: 50%;
+    min-height: 42%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.image{
+    width: 50%;
+    height: auto;
+    position: relative;
+}
+.imageContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imageContainer img{
+    width: 80%;
+   border-radius: 62% 38% 42% 58% / 30% 45% 55% 70% ;
+}
+.head{
+    font-family:ssb-semiBold;
+    font-size: 35px;
+}
+.flue{
+    font-size: 18px;
+}
+.description{
+    font-size: 16px;
+    width: 80%;
+}
+.btnArea{
+    padding-top: 10px;
+}
+.btnArea a{
+    text-decoration: none;
+    padding: 7px 30px;
+    margin-right: 20px;
+}
+.btnArea a:nth-child(1){
+    background-color: #36D7A6;
+    color: #fff;
+    transition: 1s;
+}
+.btnArea a:nth-child(2){
+    border: 1px solid #36D7A6;
+    color: #36D7A6;
+    transition: 1s;
+}
+.btnArea a:nth-child(1):hover{
+    background-color: #056e4f;
+}
+.signUpSubmission{
+    display: none;
+}
+.already_exist{
+    display: none;
+}
+.box{
+    width:350px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 30px;
+    overflow-y: scroll;
+}
+.signConfirm{
+    width: 40%;
+    margin: 0px 2.5% auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3333;
+    background-color: #fff;
+    padding: 10px 40px;
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: none;
+}
+.box h1{
+    padding-bottom: 15px;
+}
+label{
+    color: rgb(104, 103, 103);
+}
+.err{
+    width: 100%;
+    display: block;
+    font-size: 12px;
+    margin-top: -15px;
+    text-align: right;
+    color: red;
+    display: none;
+}
+input{
+    height: 40px;
+    font-size: 16px;
+}
+input,textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #d3d8d6;
+    outline: none;
+    padding:0px 10px;
+}
+input:focus,textarea:focus{
+    border: 1px solid #36D7A6;
+}
+#signinSubmission,#signUpSubmission,#superAdminAuth ,#AsigninSubmission {
+    padding: 5px 20px;
+    background: #36D7A6;
+    color: #fff;
+    border: none;
+    font-size: 17px;
+    transition: .5s;
+    margin-top: 10px;
+}
+#signinSubmission:hover,#signUpSubmission:hover,#superAdminAuth:hover , #AsigninSubmission:hover{
+    background-color: #056e4f;
+}
+.submit{
+    background: #36D7A6;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 20px;
+    border: none;
+    transition: .5s;
+    cursor: pointer;
+}
+.submit:hover{
+    background-color: #056e4f;
+}
+.listBox{
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    padding: 10px;
+}
+.signin, .signup,.superAdmin,.asignin{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+marquee .list{
+    width: 100%;
+    padding: 10px;
+}
+marquee .list p:nth-child(1){
+    font-weight: bolder;
+}
+marquee .list p:nth-child(2){
+    font-size: 14px;
+    color: #000;
+    text-align: justify;
+}
+@media screen and (max-width:992px){
+    header{
+        display:block;
+        padding: 15px 20px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    .head,.flue{
+        text-align: center;
+    }
+    .description{
+        width: 100%;
+        text-align: center;
+        font-size: 13px;
+    }
+    .btnArea {
+        width:100%;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .menu{
+        width: 35px;
+        height: 35px;
+        color: #fff;
+        border: 1px solid #36D7A6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        background: #36D7A6;
+        border-radius: 2px;
+    }
+    nav{
+        padding: 10px;
+        display: none;
+    }
+    .btnGrp{
+        display: none;
+    }
+    header nav ul{
+        flex-direction: column;
+    }
+    section{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        position: relative;
+        flex-direction: column-reverse;
+        padding:70px 10px 20px 10px;
+        justify-content: flex-start;
+    }
+    .navActive{
+        display: block;
+        transition: 1s;
+    }
+    .content{
+        width: 100%;
+        min-height: 300px;
+    }
+    .image{
+        width: 100%;
+        min-height: 50%;
+        padding: 10px;
+    }
+    .box{
+        width:98%;
+        margin: 0px 1px auto;
+    }
+    .signin,.signup,.superAdmin,.asignin{
+        width: 95%;
+    }
+    .already_exist{
+        display: none;
+    }
+    .signConfirm{
+        width: 90%;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #36D7A6; 
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #36D7A6; 
+  }
