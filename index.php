@@ -1,3 +1,11 @@
+<?php
+
+if(isset($_COOKIE['user'])){
+    header('Location:./views/userAuth/user.php?menu=classes');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
